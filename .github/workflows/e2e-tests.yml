@@ -1,0 +1,84 @@
+name: E2E Tests
+
+on:
+  push:
+    branches: [ xmain, xmaster ]
+
+jobs:
+  e2e-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Build todo-backend image
+        working-directory: ./todo-app/todo-backend
+        run: docker build -t todo-backend -f Dockerfile .
+
+      - name: Build todo-frontend image
+        working-directory: ./todo-app/todo-frontend
+        run: docker build -t todo-front -f Dockerfile .
+
+      - name: Start todo-app with Docker Compose
+        working-directory: ./todo-app
+        run: docker compose up -d
+
+      - name: Wait for services to be ready
+        run: |
+          echo "Waiting for nginx to be ready on port 8080..."
+          timeout 120 bash -c 'until curl -f http://localhost:8080 > /dev/null 2>&1; do sleep 2; done'
+          echo "Services are ready!"
+          
+      - name: Check running containers
+        run: docker ps
+
+      - name: Install dependencies
+        working-directory: ./todo-tests
+        run: npm ci
+
+      - name: Install Playwright browsers
+        working-directory: ./todo-tests
+        run: npx playwright install --with-deps chromium
+
+      - name: Run Playwright tests
+        working-directory: ./todo-tests
+        run: npm run test:e2e
+
+      - name: Upload Playwright report
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: todo-tests/playwright-report/
+          retention-days: 7
+
+      - name: Upload test results
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results
+          path: todo-tests/test-results/
+          retention-days: 7
+
+      - name: Show container logs on failure
+        if: failure()
+        working-directory: ./todo-app
+        run: |
+          echo "=== Backend logs ==="
+          docker compose logs backend
+          echo "=== Frontend logs ==="
+          docker compose logs app
+          echo "=== Nginx logs ==="
+          docker compose logs nginx
+
+      - name: Clean up Docker containers
+        if: always()
+        working-directory: ./todo-app
+        run: docker compose down -v

@@ -1,0 +1,10 @@
+node_modules/
+.env
+
+todo-app/redis_data/
+todo-app/mongo_data/
+
+# Playwright artifacts
+todo-app/test-results/
+todo-app/playwright-report/
+todo-app/playwright/.cache/
