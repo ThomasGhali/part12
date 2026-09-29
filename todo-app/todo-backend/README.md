@@ -8,7 +8,7 @@ Or in development mode with `npm run dev`
 
 # Visit counter
 
-When running the server, visit http://localhost:3000 to see visit counter, or give environment variable `PORT` to change the port.
+When running the server, visit <http://localhost:3000> to see visit counter, or give environment variable `PORT` to change the port.
 
 # MongoDB
 
