@@ -1,0 +1,192 @@
+Script started on 2026-10-10 12:51:44+03:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="142" LINES="24"]
+[1m[7m%[27m[1m[0m                                                                                                                                              ]2;thomas-ghali@thomas-ghali:~/code/learning/fsp/part12]1;..ng/fsp/part12]7;file://thomas-ghali/home/thomas-ghali/code/learning/fsp/part12\[0m[27m[24m[J[01;32m➜  [36mpart12[00m [K[?1h=[?2004h[0m[27m[24m[J[01;32m➜  [36mpart12[00m [01;34mgit:([31mmain[34m) [33m✗[00m [Kddocker start 
+[0mcompetent_gagarin                hello-node                       todo-backend-backend-1                                          
+containers-test-app_name_here-1  nervous_cray                     todo-backend-mongo-1                                            
+[Jecstatic_keller                  [Jromantic_edison                  [Jyouthful_hermann                 [J                               [3A[0m[27m[24m[23Cdocker start[K[1Ccompetent_gagarin
+[7mcompetent_gagarin              [0m  hello-node                       todo-backend-backend-1                                          [K
+containers-test-app_name_here-1  nervous_cray                     todo-backend-mongo-1                                            [K
+[Jecstatic_keller                  [Jromantic_edison                  [Jyouthful_hermann                 [J                               [3A[0m[27m[24m[23Cdocker start competent_gagarin[K
+[7mcompetent_gagarin              [0m  [7mcompetent_gagarin              [0m  [A[0m[27m[24m[23Cdocker start competent_gagarin[K[15Dntainers-test-app_name_here-1
+[0mcompetent_gagarin                [1B[7mcontainers-test-app_name_here-1[0m  [A[A[0m[27m[24m[23Cdocker start containers-test-app_name_here-1[K[31Decs[2Ctic_keller                [16D
+[1B[0mcontainers-test-app_name_here-1  [1B[7mecstatic_keller                [0m  [3A[0m[27m[24m[23Cdocker start ecstatic_keller[K[15Dhello-node     
+[33C[7mhello-node                     [0m  [2Becstatic_keller                  [3A[0m[27m[24m[23Cdocker start hello-node[K[10Dnervous_cray
+[33C[0mhello-node                       [1B[33C[7mnervous_cray                   [0m  [A[A[0m[27m[24m[23Cdocker start nervous_cray[K[12Dromantic_edison
+[1B[33C[0mnervous_cray                     [1B[33C[7mromantic_edison                [0m  [3A[0m[27m[24m[23Cdocker start romantic_edison[K[15Dtodo-backend-backend-1
+[66C[7mtodo-backend-backend-1         [0m[2B[33Cromantic_edison                  [3A[0m[27m[24m[23Cdocker start todo-backend-backend-1[K[9Dmongo-1  
+[66C[0mtodo-backend-backend-1         [1B[66C[7mtodo-backend-mongo-1           [0m[A[A[0m[27m[24m[23Cdocker start todo-backend-mongo-1[K
+[J[A[56C[1m [0m[0m [?1l>[?2004l
+[J]2;docker start todo-backend-mongo-1]1;dockertodo-backend-mongo-1
+[1m[7m%[27m[1m[0m                                                                                                                                              ]2;thomas-ghali@thomas-ghali:~/code/learning/fsp/part12]1;..ng/fsp/part12]7;file://thomas-ghali/home/thomas-ghali/code/learning/fsp/part12\[0m[27m[24m[J[01;32m➜  [36mpart12[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004hppsp  ddokc  cker ps[?1l>[?2004l
+]2;docker ps]1;dockerCONTAINER ID   IMAGE       COMMAND                  CREATED      STATUS         PORTS                                           NAMES
+88b65a5363b5   mongo:7.0   "docker-entrypoint.s…"   2 days ago   Up 6 seconds   0.0.0.0:3456->27017/tcp, [::]:3456->27017/tcp   todo-backend-mongo-1
+[1m[7m%[27m[1m[0m                                                                                                                                              ]2;thomas-ghali@thomas-ghali:~/code/learning/fsp/part12]1;..ng/fsp/part12]7;file://thomas-ghali/home/thomas-ghali/code/learning/fsp/part12\[0m[27m[24m[J[01;32m➜  [36mpart12[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004hddocker exec todo-backend-mongo-1[1m [0m[0m [8D-todo-backend-mongo-1[20Ditodo-backend-mongo-1[20D[1Ctodo-backend-mongo-1[20D todo-backend-mongo-1[20D[5C[8C[6C[1C bash[?1l>[?2004l
+]2;docker exec -it todo-backend-mongo-1 bash]1;docker[?2004hroot@88b65a5363b5:/# use   ls
+[?2004lbin   data  docker-entrypoint-initdb.d	home	    lib    lib64   media  opt	root  sbin  sys  usr
+boot  dev   etc				js-yaml.js  lib32  libx32  mnt	  proc	run   srv   tmp  var
+[?2004hroot@88b65a5363b5:/# show dbs
+[?2004lbash: show: command not found
+[?2004hroot@88b65a5363b5:/# [7mmongosh -u root -p example[27mroot@88b65a5363b5:/# mongosh -u root -p example
+[?2004l]0;mongosh mongodb://<credentials>@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000Current Mongosh Log ID:	6aca0b71164a631552d2d940
+Connecting to:		[1m[32mmongodb://<credentials>@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.10.0[0m
+Using MongoDB:		7.0.43
+[1m[33mUsing Mongosh[0m:		2.10.0
+
+For mongosh info see: https://www.mongodb.com/docs/mongodb-shell/
+
+[1G[0J [1G[?2004h[1m[33m------[0m
+   [1m[33mThe server generated these startup warnings when booting[0m
+   2026-10-10T09:52:17.445+00:00: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem
+   2026-10-10T09:52:18.237+00:00: Soft rlimits for open file descriptors too low
+[1m[33m------[0m
+
+[1G[0Jtest> [7Gshow 
+show databases               show dbs                     show collections             show tables
+show profile                 show users                   show roles                   show log
+show logs                    show startupWarnings         show automationNotices       show nonGenuineMongoDBCheck
+
+[1G[0Jtest> show [12Gdbs
+[1madmin[0m         100.00 KiB
+[1mconfig[0m         72.00 KiB
+[1mlocal[0m          72.00 KiB
+[1mthe_database[0m   56.00 KiB
+[1G[0Jtest> [7Guse the [1G[0Jtest> use the[14G_database
+switched to db the_database
+[1G[0Jthe_database> [15Gshow collections
+[1mtodos[0m
+[1G[0Jthe_database> [15Gdb.todos.find()[1D[1G[0Jthe_database> db.todos.find[44m([49m)[29G[1G[0Jthe_database> db.todos.find[44m([49m{)[30G[1G[0Jthe_database> db.todos.find[44m([49m{})[31G[1C[1G[0Jthe_database> db.todos.find({})[32G
+[
+  {
+    _id: ObjectId([32m'6ac7596903011ac36b391ca8'[39m),
+    text: [32m'updated text'[39m,
+    done: [33mtrue[39m
+  },
+  {
+    _id: ObjectId([32m'6ac7596903011ac36b391ca9'[39m),
+    text: [32m'Learn about containers'[39m,
+    done: [33mfalse[39m
+  }
+]
+[1G[0Jthe_database> [15Gdb.
+db.__proto__                         db.constructor                       db.hasOwnProperty
+db.isPrototypeOf                     db.propertyIsEnumerable              db.toLocaleString
+db.toString                          db.valueOf                           db._baseOptions
+db._cachedCollectionNames            db._cachedHello                      db._collections
+db._getCollectionNames               db._getCollectionNamesForCompletion  db._getCollectionNamesWithTypes
+db._getCurrentOperations             db._getLastErrorObj                  db._listCollections
+db._maybeCachedHello                 db._mongo                            db._name
+db._runAdminCommand                  db._runAdminCursorCommand            db._runAdminReadCommand
+db._runCommand                       db._runCursorCommand                 db._runReadCommand
+db._session                          db.adminCommand                      db.aggregate
+db.auth                              db.changeUserPassword                db.checkMetadataConsistency
+db.cloneCollection                   db.cloneDatabase                     db.commandHelp
+db.copyDatabase                      db.createCollection                  db.createEncryptedCollection
+db.createRole                        db.createUser                        db.createView
+db.currentOp                         db.dropAllRoles                      db.dropAllUsers
+db.dropDatabase                      db.dropRole                          db.dropUser
+db.fsyncLock                         db.fsyncUnlock                       db.getCollection
+db.getCollectionInfos                db.getCollectionNames                db.getLastError
+db.getLastErrorObj                   db.getLogComponents                  db.getMongo
+db.getName                           db.getProfilingStatus                db.getReplicationInfo
+db.getRole                           db.getRoles                          db.getSiblingDB
+db.getUser                           db.getUsers                          db.grantPrivilegesToRole
+db.grantRolesToRole                  db.grantRolesToUser                  db.hello
+db.help                              db.hostInfo                          db.isMaster
+db.killOp                            db.listCommands                      db.logout
+db.printCollectionStats              db.printReplicationInfo              db.printSecondaryReplicationInfo
+db.printShardingStatus               db.printSlaveReplicationInfo         db.revokePrivilegesFromRole
+db.revokeRolesFromRole               db.revokeRolesFromUser               db.rotateCertificates
+db.runCommand                        db.serverBits                        db.serverBuildInfo
+db.serverCmdLineOpts                 db.serverStatus                      db.setLogLevel
+db.setProfilingLevel                 db.setSecondaryOk                    db.shutdownServer
+db.sql                               db.stats                             db.todos
+db.updateRole                        db.updateUser                        db.version
+db.watch
+
+[1G[0Jthe_database> db.[18Gtodos.insertOne({})[1D[1G[0Jthe_database> db.todos.insertOne[44m([49m{})[36G[1D[1G[0Jthe_database> db.todos.insertOne([44m{[49m})[35G[2C[1G[0Jthe_database> db.todos.insertOne({})[37G
+{
+  acknowledged: [33mtrue[39m,
+  insertedId: ObjectId([32m'6aca0bd7164a631552d2d941'[39m)
+}
+[1G[0Jthe_database> [15G[1G[0Jthe_database> db.todos.insertOne({})[37G[1G[0Jthe_database> db.todos.find({})[32G
+[
+  {
+    _id: ObjectId([32m'6ac7596903011ac36b391ca8'[39m),
+    text: [32m'updated text'[39m,
+    done: [33mtrue[39m
+  },
+  {
+    _id: ObjectId([32m'6ac7596903011ac36b391ca9'[39m),
+    text: [32m'Learn about containers'[39m,
+    done: [33mfalse[39m
+  },
+  { _id: ObjectId([32m'6aca0bd7164a631552d2d941'[39m) }
+]
+[1G[0Jthe_database> [15Gdb.todos.deleteOne({
+|   _id[33m_id[39m: Objec[36mObject[39mObjectId([32m"[39m[32m6[39m[32ma[39m[32mc[39m[32ma[39m[32m0[39m[32mb[39m[32md[39m[32m7[39m[32m1[39m[32m6[39m[32m4[39m[32ma[39m[32m6[39m[32m3[39m[32m1[39m[32m5[39m[32m5[39m[32m2[39m[32md[39m[32m2[39m[32md[39m[32m9[39m[32m4[39m[32m1[39m[32m"[39m)
+| })
+{ acknowledged: [33mtrue[39m, deletedCount: [33m1[39m }
+[1G[0Jthe_database> [15Gdb.todos.insertOne({
+|   text[33mtext[39m: [32m"[39m[32mI[39m[32mn[39m[32mc[39m[32mr[39m[32me[39m[32ma[39m[32ms[39m[32me[39m [32mt[39m[32mh[39m[32me[39m [32mn[39m[32mu[39m[32mm[39m[32mb[39m[32me[39m[32mr[39m [32mo[39m[32mf[39m [32mt[39m[32mo[39m[32mo[39m[32ml[39m[32ms[39m [32mi[39m[32mn[39m [32mm[39m[32my[39m [32mt[39m[32mo[39m[32mo[39m[32ml[39m [32mb[39m[32me[39m[32ml[39m[32mt[39m[32m"[39m,
+|   d[36mdo[39mdone: fals[33mfalse[39m
+| })
+{
+  acknowledged: [33mtrue[39m,
+  insertedId: ObjectId([32m'6aca0c37164a631552d2d942'[39m)
+}
+[1G[0Jthe_database> [15G[1G[0Jthe_database> db.todos.insertOne({
+|   text: "Increase the number of tools in my tool belt",
+|   done: false
+| })[5G[3A[1G[0Jthe_database> db.todos.insertOne({
+|   text: "Increase the number of tools in my tool belt",
+|   done: false
+| })[5G[1A[2A[1G[0Jthe_database> db.todos.insertOne({
+|   text: "Increase the number of tools in my tool belt",
+|   done: false
+| })[5G[2A[1A[1G[0Jthe_database> db.todos.insertOne({
+|   text: "Increase the number of tools in my tool belt",
+|   done: false
+| })[5G[1A[2A[1G[0Jthe_database> db.todos.insertOne({
+|   text: "Increase the number of tools in my tool belt",
+|   done: false
+| })[5G[3A[1G[0Jthe_database> [15G[1G[0Jthe_database> db.todos.insertOne({
+|   text: "Increase the number of tools in my tool belt",
+|   done: false
+| })[5G[3A[1G[0Jthe_database> db.todos.insertOne({
+|   text: "Increase the number of tools in my tool belt",
+|   done: false
+| })[5G[1A[2A[1G[0Jthe_database> db.todos.insertOne({
+|   text: "Increase the number of tools in my tool belt",
+|   done: false
+| })[5G[2A[1A[1G[0Jthe_database> db.todos.insertOne({
+|   text: "Increase the number of tools in my tool belt",
+|   done: false
+| })[17G[3A[1G[0Jthe_database> db.todos.deleteOne({
+|   _id: ObjectId("6aca0bd7164a631552d2d941")
+| })[5G[2A[1G[0Jthe_database> db.todos.deleteOne({
+|   _id: ObjectId("6aca0bd7164a631552d2d941")
+| })[5G[1A[1A[1G[0Jthe_database> db.todos.deleteOne({
+|   _id: ObjectId("6aca0bd7164a631552d2d941")
+| })[17G[2A[1G[0Jthe_database> db.todos.find({})[32G
+[
+  {
+    _id: ObjectId([32m'6ac7596903011ac36b391ca8'[39m),
+    text: [32m'updated text'[39m,
+    done: [33mtrue[39m
+  },
+  {
+    _id: ObjectId([32m'6ac7596903011ac36b391ca9'[39m),
+    text: [32m'Learn about containers'[39m,
+    done: [33mfalse[39m
+  },
+  {
+    _id: ObjectId([32m'6aca0c37164a631552d2d942'[39m),
+    text: [32m'Increase the number of tools in my tool belt'[39m,
+    done: [33mfalse[39m
+  }
+]
+[1G[0Jthe_database> [15Gexit
+[?2004l]0;[?2004hroot@88b65a5363b5:/# exit
+[?2004lexit
+[1m[7m%[27m[1m[0m                                                                                                                                              ]2;thomas-ghali@thomas-ghali:~/code/learning/fsp/part12]1;..ng/fsp/part12]7;file://thomas-ghali/home/thomas-ghali/code/learning/fsp/part12\[0m[27m[24m[J[01;32m➜  [36mpart12[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004heexit[?1l>[?2004l
+]2;exit]1;exit
+Script done on 2026-10-10 12:59:16+03:00 [COMMAND_EXIT_CODE="0"]
